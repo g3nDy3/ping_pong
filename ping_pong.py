@@ -40,9 +40,10 @@ class Player(GameSprite):
         if keys[K_s] and self.rect.y < win_height - 80:
             self.rect.y += self.speed
 
+
+
 #флаги отвечающие за состояние игры
 game = True
-finish = False
 clock = time.Clock()
 FPS = 60
 
@@ -60,11 +61,14 @@ lose2 = font.render('PLAYER 2 LOSE!', True, (180, 0, 0))
 
 speed_x = 3
 speed_y = 3
+finish = False
 
 while game:
     for e in event.get():
         if e.type == QUIT:
             game = False
+
+            
     if finish != True:
         window.fill(back)
         racket1.update_l()
